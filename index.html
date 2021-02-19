@@ -8,7 +8,7 @@
   <script type='text/javascript' src="scripts/jquery-1.11.1.min.js"></script>
   <script type='text/javascript' src="scripts/chromefix.js"></script>
   <script type='text/javascript' src="scripts/jquery.mobile-1.4.5.min.js"></script>
-  <script type='text/javascript' src="scripts/ch3-PE3.js"></script>
+  <script type='text/javascript' src="scripts/main.js"></script>
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -18,29 +18,17 @@
     <div data-role=header>Converting Fluid Measurements</div>
     <div data-role="content">
 
-      <label for="gallons">Enter the quantity in gallons:</label>
-      <input type='range' name='gallons' id='gallons' min='0' max='999' placeholder='gallons'>
+      <p><label for="gallons">Gallons:</label>
+      <input id="inputGallons" type="range" min="0" max="100" placeholder="Gallons"
+        oninput="fluidConverter(this.value)" onchange="fluidConverter(this.value)"></p>
 
+      <p>Liters: <span id="outputLiters"></span></p>
 
-      <br>
-
-      <button onclick="display()">
-        Display
-      </button>
-
-      <br>
-      <table id="data">
-        <tr>
-          <td>Quantity Entered:</td>
-          <td id="gallonsDisplay">0</td>
-          <td>gallons</td>
-        </tr>
-      </table>
     </div>
       <div data-role=footer>
         <small>
 
-Cross-platform mobile app demo
+Cross-platform app
 
         </small>
       </div>
